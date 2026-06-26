@@ -117,6 +117,8 @@ Bias-free room allocation using multi-criteria ranking.
 
 ## 📊 GitHub Stats
 
+## 📊 GitHub Stats
+
 <p align="center">
   <img height="165" src="https://github-readme-stats.vercel.app/api?username=sunilkumaryadav&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" />
   <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sunilkumaryadav&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
@@ -125,7 +127,6 @@ Bias-free room allocation using multi-criteria ranking.
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=sunilkumaryadav&theme=tokyonight&hide_border=true" />
 </p>
-
 ---
 
 ## 📜 Certifications
@@ -150,7 +151,7 @@ Bias-free room allocation using multi-criteria ranking.
 ---
 
 <p align="center">
-  <b>📍 Gorakhpur, UP &nbsp;|&nbsp; 📞 +91 84234 61015 &nbsp;|&nbsp; 📧 sunilkumaryadau1@gmail.com</b>
+  <b>📍 Gorakhpur, UP &nbsp;|&nbsp;  &nbsp;|&nbsp; 📧 sunilkumaryadau1@gmail.com</b>
   <br><br>
   <i>"The best way to learn is to teach — and the best way to teach is to keep learning."</i>
   <br><br>
