@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sunil Kumar Yadav — GitHub Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f5f7f5;
+    --surface: #ffffff;
+    --surface2: #f0f4f0;
+    --border: #e2e8e2;
+    --text: #1a2e1a;
+    --text2: #4a6a4a;
+    --text3: #7a9a7a;
+    --green: #1D9E75;
+    --green-light: #E1F5EE;
+    --green-border: #5DCAA5;
+    --green-dark: #0F6E56;
+    --purple: #534AB7;
+    --purple-light: #EEEDFE;
+    --purple-border: #AFA9EC;
+    --blue: #185FA5;
+    --blue-light: #E6F1FB;
+    --blue-border: #85B7EB;
+    --amber: #854F0B;
+    --amber-light: #FAEEDA;
+    --amber-border: #EF9F27;
+    --coral: #993C1D;
+    --coral-light: #FAECE7;
+    --coral-border: #F0997B;
+    --radius: 12px;
+    --shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+
+  .wrap { max-width: 900px; margin: 0 auto; }
+
+  /* HERO */
+  .hero {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: center;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1D9E75, #534AB7, #185FA5);
+  }
+  .avatar {
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1D9E75, #0F6E56);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2.2rem; font-weight: 600; color: #fff;
+    flex-shrink: 0;
+    border: 3px solid var(--green-border);
+  }
+  .hero-name { font-size: 2rem; font-weight: 600; color: var(--text); letter-spacing: -0.5px; }
+  .hero-title { font-size: 0.95rem; color: var(--text2); margin-top: 6px; line-height: 1.6; }
+  .hero-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .hbadge {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 14px; border-radius: 30px; font-size: 0.8rem; font-weight: 500;
+    text-decoration: none; border: 1px solid var(--border);
+    background: var(--surface2); color: var(--text2);
+    transition: all 0.15s;
+  }
+  .hbadge:hover { border-color: var(--green); color: var(--green-dark); background: var(--green-light); }
+  .hbadge.active { background: var(--green-light); border-color: var(--green-border); color: var(--green-dark); }
+  .hbadge i { font-size: 15px; }
+
+  /* SECTIONS */
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
+
+  .section { margin-bottom: 1.75rem; }
+  .sec-label {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--text3);
+    margin-bottom: 0.9rem; padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .sec-label i { font-size: 15px; color: var(--green); }
+
+  /* ABOUT */
+  .about-box {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1.25rem 1.4rem;
+    font-size: 0.9rem; color: var(--text2); line-height: 1.8;
+    box-shadow: var(--shadow);
+  }
+  .about-box code {
+    font-family: 'JetBrains Mono', monospace; font-size: 0.82rem;
+    background: var(--green-light); border: 1px solid var(--green-border);
+    padding: 1px 6px; border-radius: 4px; color: var(--green-dark);
+  }
+  .about-box strong { color: var(--text); font-weight: 600; }
+
+  /* STATS */
+  .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+  .stat-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1.1rem; text-align: center;
+    box-shadow: var(--shadow);
+  }
+  .stat-val { font-size: 1.6rem; font-weight: 600; color: var(--green); font-family: 'JetBrains Mono', monospace; }
+  .stat-lbl { font-size: 0.72rem; color: var(--text3); margin-top: 4px; }
+
+  /* CARDS */
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1.1rem 1.25rem;
+    box-shadow: var(--shadow);
+  }
+  .card.accent-green { border-left: 3px solid var(--green); }
+  .card.accent-blue  { border-left: 3px solid var(--blue); }
+
+  .exp-role { font-size: 0.92rem; font-weight: 600; color: var(--text); display: flex; align-items: center; gap: 7px; }
+  .exp-role i { font-size: 16px; color: var(--green); }
+  .exp-co { font-size: 0.8rem; color: var(--blue); margin-top: 3px; font-weight: 500; }
+  .exp-period { font-size: 0.74rem; color: var(--text3); margin-top: 4px; }
+  .exp-bullet {
+    font-size: 0.79rem; color: var(--text2); margin-top: 8px; line-height: 1.65;
+    border-left: 2px solid var(--green-border); padding-left: 10px;
+  }
+
+  .proj-title { font-size: 1rem; font-weight: 600; color: var(--text); display: flex; align-items: center; gap: 7px; }
+  .proj-title i { font-size: 18px; color: var(--green); }
+  .proj-period { font-size: 0.74rem; color: var(--text3); margin-top: 3px; }
+  .proj-desc { font-size: 0.82rem; color: var(--text2); margin-top: 10px; line-height: 1.7; }
+
+  /* PILLS */
+  .pills { display: flex; flex-wrap: wrap; margin-top: 10px; gap: 5px; }
+  .pill {
+    display: inline-flex; align-items: center;
+    padding: 3px 10px; border-radius: 20px;
+    font-size: 0.73rem; font-weight: 500; border: 1px solid;
+  }
+  .pill.py  { background: var(--green-light);  border-color: var(--green-border);  color: var(--green-dark); }
+  .pill.ai  { background: var(--purple-light); border-color: var(--purple-border); color: var(--purple); }
+  .pill.db  { background: var(--blue-light);   border-color: var(--blue-border);   color: var(--blue); }
+  .pill.fr  { background: var(--amber-light);  border-color: var(--amber-border);  color: var(--amber); }
+  .pill.sec { background: var(--coral-light);  border-color: var(--coral-border);  color: var(--coral); }
+
+  /* SKILLS */
+  .skill-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 0.85rem 1rem;
+    box-shadow: var(--shadow);
+  }
+  .skill-cat {
+    font-size: 0.68rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--text3); margin-bottom: 8px;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .skill-cat i { font-size: 13px; color: var(--green); }
+
+  /* CERTS */
+  .cert-item { display: flex; align-items: center; gap: 12px; padding: 0.65rem 0; border-bottom: 1px solid var(--border); }
+  .cert-item:last-child { border-bottom: none; }
+  .cert-icon {
+    width: 32px; height: 32px; border-radius: 8px;
+    background: var(--green-light); border: 1px solid var(--green-border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0;
+  }
+  .cert-name { font-size: 0.84rem; font-weight: 500; color: var(--text); }
+  .cert-org  { font-size: 0.74rem; color: var(--text3); margin-top: 2px; }
+
+  /* EDU */
+  .edu-row { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
+  .edu-row:last-child { border-bottom: none; }
+  .edu-deg  { font-size: 0.86rem; font-weight: 500; color: var(--text); }
+  .edu-inst { font-size: 0.76rem; color: var(--text3); margin-top: 2px; }
+  .edu-score {
+    font-size: 0.8rem; font-weight: 600; color: var(--green-dark);
+    background: var(--green-light); padding: 3px 10px;
+    border-radius: 20px; border: 1px solid var(--green-border); white-space: nowrap;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center; padding: 1.5rem 0 2rem;
+    font-size: 0.82rem; color: var(--text3);
+  }
+  .footer .quote { font-style: italic; color: var(--text2); margin-top: 6px; font-size: 0.85rem; }
+  .footer .cta {
+    display: inline-block; margin-top: 14px;
+    padding: 10px 24px; border-radius: 30px;
+    background: var(--green); color: #fff;
+    font-size: 0.85rem; font-weight: 600; text-decoration: none;
+    transition: background 0.15s;
+  }
+  .footer .cta:hover { background: var(--green-dark); }
+
+  @media (max-width: 580px) {
+    .hero { grid-template-columns: 1fr; text-align: center; }
+    .hero-links { justify-content: center; }
+    .avatar { margin: 0 auto; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="avatar">SK</div>
+    <div>
+      <div class="hero-name">Sunil Kumar Yadav</div>
+      <div class="hero-title">
+        Final-year B.Tech CSE &nbsp;·&nbsp; DDU Gorakhpur University (2022–26)<br>
+        AI &amp; ML Engineer &nbsp;·&nbsp; Cybersecurity Enthusiast &nbsp;·&nbsp; 3+ Year Educator
+      </div>
+      <div class="hero-links">
+        <span class="hbadge active"><i class="ti ti-circle-check"></i> Open to Opportunities</span>
+        <a class="hbadge" href="https://linkedin.com/in/sunil-kumar-yadav-ai" target="_blank"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
+        <a class="hbadge" href="https://github.com/sunilkumaryadav" target="_blank"><i class="ti ti-brand-github"></i> GitHub</a>
+        <a class="hbadge" href="mailto:sunilkumaryadau1@gmail.com"><i class="ti ti-mail"></i> Email</a>
+        <span class="hbadge"><i class="ti ti-map-pin"></i> Gorakhpur, UP</span>
+        <span class="hbadge"><i class="ti ti-phone"></i> +91 84234 61015</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="section">
+    <div class="sec-label"><i class="ti ti-user"></i> About Me</div>
+    <div class="about-box">
+      Final-year B.Tech (CSE) student specialising in <code>Artificial Intelligence</code> and <code>Machine Learning</code>, 
+      with hands-on experience in Python, NLP, deep learning, and end-to-end AI project development. 
+      Combines a solid technical foundation with <strong>3+ years of teaching experience</strong> — 
+      adept at simplifying complex concepts for diverse learners and delivering measurable outcomes 
+      through structured, assessment-driven instruction.
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="section">
+    <div class="sec-label"><i class="ti ti-chart-bar"></i> Quick Stats</div>
+    <div class="stats-row">
+      <div class="stat-card"><div class="stat-val">3+</div><div class="stat-lbl">Years Teaching</div></div>
+      <div class="stat-card"><div class="stat-val">4</div><div class="stat-lbl">Internships</div></div>
+      <div class="stat-card"><div class="stat-val">84%</div><div class="stat-lbl">ML Accuracy</div></div>
+      <div class="stat-card"><div class="stat-val">200+</div><div class="stat-lbl">Pages RAG</div></div>
+      <div class="stat-card"><div class="stat-val">9K+</div><div class="stat-lbl">Row Dataset</div></div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <div class="sec-label"><i class="ti ti-briefcase"></i> Experience</div>
+    <div class="grid2">
+      <div class="card">
+        <div class="exp-role"><i class="ti ti-code"></i> Python Intern</div>
+        <div class="exp-co">Infosys Springboard · Remote</div>
+        <div class="exp-period"><i class="ti ti-calendar" style="font-size:12px"></i> Oct – Dec 2025</div>
+        <div class="exp-bullet">Architected PostgreSQL schema for Employee Recognition Dashboard; developed Python backend logic and REST APIs for seamless data flow.</div>
+      </div>
+      <div class="card">
+        <div class="exp-role"><i class="ti ti-brain"></i> Machine Learning Intern</div>
+        <div class="exp-co">Cognifyz Technologies · Remote</div>
+        <div class="exp-period"><i class="ti ti-calendar" style="font-size:12px"></i> Dec 2024 – Jan 2025</div>
+        <div class="exp-bullet">Built end-to-end ML pipeline (NumPy, Pandas, scikit-learn); deployed restaurant rating predictor as Flask REST API — <strong>84% accuracy</strong> on 9,000+ rows.</div>
+      </div>
+      <div class="card">
+        <div class="exp-role"><i class="ti ti-shield-lock"></i> Cybersecurity Intern</div>
+        <div class="exp-co">C-DAC, Noida · Remote</div>
+        <div class="exp-period"><i class="ti ti-calendar" style="font-size:12px"></i> May – Jun 2024</div>
+        <div class="exp-bullet">Network security assessments using Nmap, Wireshark, Metasploit; studied MITM, SQL injection, and brute-force vectors with defensive countermeasures.</div>
+      </div>
+      <div class="card">
+        <div class="exp-role"><i class="ti ti-school"></i> Private Tutor</div>
+        <div class="exp-co">Maths & Physics (Class 6–10) · Self-Employed</div>
+        <div class="exp-period"><i class="ti ti-calendar" style="font-size:12px"></i> 2022 – Present</div>
+        <div class="exp-bullet">10+ students per batch; curriculum-driven concept-first lessons with assessment-driven feedback over 3+ years of continuous teaching.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section">
+    <div class="sec-label"><i class="ti ti-rocket"></i> Featured Projects</div>
+    <div class="grid2">
+      <div class="card accent-green">
+        <div class="proj-title"><i class="ti ti-message-chatbot"></i> VRINDA</div>
+        <div class="proj-period">Personalised Document Chat Assistant · May – Jun 2025</div>
+        <div class="proj-desc">
+          AI-powered Q&A over <strong>200+ page documents</strong> with sub-second retrieval. 
+          Hybrid semantic search + GPT generative pipeline with automatic fallback for out-of-context queries. 
+          Multi-session context-aware answers across PDF, Word &amp; plain-text uploads.
+        </div>
+        <div class="pills">
+          <span class="pill py">Python</span>
+          <span class="pill ai">ChatGPT API</span>
+          <span class="pill ai">FAISS</span>
+          <span class="pill db">MySQL</span>
+          <span class="pill fr">Flask</span>
+        </div>
+      </div>
+      <div class="card accent-blue">
+        <div class="proj-title"><i class="ti ti-building-community"></i> Hostel Allotment System</div>
+        <div class="proj-period">Automatic Multi-Criteria Ranking Portal · Feb – Mar 2024</div>
+        <div class="proj-desc">
+          Bias-free hostel room allocation using <strong>CPI + home distance</strong> multi-criteria ranking algorithm. 
+          Flask portal with role-based access for applications and PDF report generation. 
+          Normalised MySQL database with stored procedures for transparent, efficient processing.
+        </div>
+        <div class="pills">
+          <span class="pill py">Python</span>
+          <span class="pill fr">Flask</span>
+          <span class="pill db">MySQL</span>
+          <span class="pill fr">Stored Procedures</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TECH STACK -->
+  <div class="section">
+    <div class="sec-label"><i class="ti ti-tools"></i> Tech Stack</div>
+    <div class="grid3">
+      <div class="skill-card">
+        <div class="skill-cat"><i class="ti ti-terminal-2"></i> Languages</div>
+        <div class="pills" style="margin-top:0">
+          <span class="pill py">Python</span>
+          <span class="pill py">C</span>
+          <span class="pill py">SQL</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-cat"><i class="ti ti-brain"></i> ML / DL</div>
+        <div class="pills" style="margin-top:0">
+          <span class="pill ai">TensorFlow</span>
+          <span class="pill ai">PyTorch</span>
+          <span class="pill ai">Keras</span>
+          <span class="pill ai">scikit-learn</span>
+          <span class="pill ai">Transformers</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-cat"><i class="ti ti-chart-dots"></i> Data</div>
+        <div class="pills" style="margin-top:0">
+          <span class="pill py">NumPy</span>
+          <span class="pill py">Pandas</span>
+          <span class="pill py">Matplotlib</span>
+          <span class="pill py">Seaborn</span>
+          <span class="pill ai">spaCy</span>
+          <span class="pill ai">NLTK</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-cat"><i class="ti ti-server"></i> Frameworks</div>
+        <div class="pills" style="margin-top:0">
+          <span class="pill fr">Flask</span>
+          <span class="pill fr">FastAPI</span>
+          <span class="pill fr">Streamlit</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-cat"><i class="ti ti-database"></i> Databases</div>
+        <div class="pills" style="margin-top:0">
+          <span class="pill db">MySQL</span>
+          <span class="pill db">PostgreSQL</span>
+          <span class="pill db">MongoDB</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-cat"><i class="ti ti-shield"></i> Cybersecurity</div>
+        <div class="pills" style="margin-top:0">
+          <span class="pill sec">Nmap</span>
+          <span class="pill sec">Wireshark</span>
+          <span class="pill sec">Metasploit</span>
+          <span class="pill sec">AirCrack-ng</span>
+          <span class="pill sec">John the Ripper</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-cat"><i class="ti ti-tools"></i> Tools</div>
+        <div class="pills" style="margin-top:0">
+          <span class="pill fr">Git</span>
+          <span class="pill fr">Jupyter</span>
+          <span class="pill fr">VS Code</span>
+          <span class="pill fr">Linux</span>
+          <span class="pill fr">Google Colab</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTS + EDU -->
+  <div class="grid2" style="margin-bottom:1.75rem">
+    <div>
+      <div class="sec-label"><i class="ti ti-certificate"></i> Certifications</div>
+      <div class="card">
+        <div class="cert-item">
+          <div class="cert-icon">🧠</div>
+          <div><div class="cert-name">Introduction to NLP</div><div class="cert-org">Infosys Springboard</div></div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon">🤖</div>
+          <div><div class="cert-name">Introduction to Artificial Intelligence</div><div class="cert-org">Infosys Springboard</div></div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon">🐍</div>
+          <div><div class="cert-name">Machine Learning using Python</div><div class="cert-org">NIELIT Calicut</div></div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon">💬</div>
+          <div><div class="cert-name">Effective Communication Training</div><div class="cert-org">BSN Infotech Pvt. Ltd.</div></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="sec-label"><i class="ti ti-school"></i> Education</div>
+      <div class="card">
+        <div class="edu-row">
+          <div><div class="edu-deg">B.Tech — CSE</div><div class="edu-inst">DDU Gorakhpur University · 2022–26</div></div>
+          <span class="edu-score">CPI 7.1</span>
+        </div>
+        <div class="edu-row">
+          <div><div class="edu-deg">Intermediate (XII)</div><div class="edu-inst">MMM Inter College · 2021</div></div>
+          <span class="edu-score">81.0%</span>
+        </div>
+        <div class="edu-row">
+          <div><div class="edu-deg">High School (X)</div><div class="edu-inst">SDG High School · 2019</div></div>
+          <span class="edu-score">81.5%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>📍 Gorakhpur, UP &nbsp;·&nbsp; 📞 +91 84234 61015 &nbsp;·&nbsp; ✉️ sunilkumaryadau1@gmail.com</div>
+    <div class="quote">"The best way to learn is to teach — and the best way to teach is to keep learning."</div>
+    <a class="cta" href="mailto:sunilkumaryadau1@gmail.com">✉️ Let's Connect</a>
+  </div>
+
+</div>
+</body>
+</html>
